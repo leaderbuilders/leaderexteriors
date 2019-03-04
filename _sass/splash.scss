@@ -24,6 +24,7 @@
 
 .splash-box {
     background: $green;
+    color: #fff;
     padding: rem(20);
 }
 
@@ -36,7 +37,7 @@
     }
     .splash-box {
         position: absolute;
-        z-index: 1;
+        z-index: 2;
         transform: translateY(-100%);
         right: 0;
         width: rem(300);

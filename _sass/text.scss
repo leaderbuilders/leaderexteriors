@@ -21,14 +21,16 @@
 
 .text_large {
     font-size: rem(19);
+    @media screen and (min-width: breakpoint(1)) {
+        font-size: rem(23);
+    }
 }
 
 .text_extraLarge {
     font-size: rem(23);
-}
-
-.text_extraExtraLarge {
-    font-size: rem(32);
+    @media screen and (min-width: breakpoint(1)) {
+        font-size: rem(32);
+    }
 }
 
 .text_light {

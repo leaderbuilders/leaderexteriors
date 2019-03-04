@@ -1,4 +1,4 @@
-.bottom {
+.bottom-super {
     background: #101010;
     color: #fff;
     padding-top: rem(40);
@@ -7,4 +7,11 @@
         padding-top: rem(60);
         padding-bottom: rem(60);
     }
+}
+
+.bottom-sub {
+    background: #000;
+    color: #fff;
+    padding-top: rem(20);
+    padding-bottom: rem(20);
 }

@@ -50,7 +50,7 @@
                     <a class="top-mobile-navigation-toggle" href="/"><i class="top-mobile-navigation-toggle-icon"></i></a>
                     <ul>
                         <li><a href="/">Home</a></li>
-                        <li><a href="/about">About</a></li>
+                        <li><a href="/about">About Us</a></li>
                         <li><a href="/exteriors">Exterior Makeovers</a></li>
                         <li><a href="/outdoors">Outdoor Spaces</a></li>
                         <li><a href="/contact">Contact</a></li>
@@ -63,7 +63,7 @@
                 <div class="wrapper">
                     <ul>
                         <li><a href="/" class="{% if page.permalink == "/" %}isActive{% endif %}">Home</a></li>
-                        <li><a href="/about" class="{% if page.permalink == "/about/" %}isActive{% endif %}">About</a></li>
+                        <li><a href="/about" class="{% if page.permalink == "/about/" %}isActive{% endif %}">About Us</a></li>
                         <li><a href="/exteriors" class="{% if page.permalink == "/exteriors/" %}isActive{% endif %}">Exterior Makeovers</a></li>
                         <li><a href="/outdoors" class="{% if page.permalink == "/outdoors/" %}isActive{% endif %}">Outdoor Spaces</a></li>
                         <li><a href="/contact" class="{% if page.permalink == "/contact/" %}isActive{% endif %}">Contact Us</a></li>
@@ -74,7 +74,7 @@
 
     {{ content }}
     <footer>
-        <div class="bottom">
+        <div class="bottom-super">
             <div class="wrapper">
                 <div class="grid grid_large">
                     <div class="grid-col grid-col_6@br2">
@@ -128,15 +128,21 @@
                             <li>The City of Naperville.</li>
                         </ul>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-sub">
+            <div class="wrapper">
+                <div class="grid">
                     <div class="grid-col">
-                        <p class="text text_small text_light">Copyright {{ 'now' | date: '%Y' }} Leader Exteriors | <a href="/privacy-policy">Privacy Policy</a> | <a href="/site-map">Site Map</a></p>
-                        <ul class="text text_small text_light">
+                        <p class="text text_small text_light">Copyright {{ 'now' | date: '%Y' }} Leader Exteriors<!-- | <a href="/privacy-policy">Privacy Policy</a> | <a href="/site-map">Site Map</a>--></p>
+                        <!--<ul class="text text_small text_light">
                             <li><a target="_blank" href="https://www.houzz.com/">Houzz</a></li>
                             <li><a target="_blank" href="https://www.facebook.com/">Facebook</a></li>
                             <li><a target="_blank" href="https://www.instagram.com/">Instagram</a></li>
                             <li><a target="_blank" href="https://www.pinterest.com/">Pinterest</a></li>
                             <li><a target="_blank" href="https://www.youtube.com/">Youtube</a></li>
-                        </ul>
+                        </ul>-->
                     </div>
                 </div>
             </div>

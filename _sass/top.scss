@@ -59,13 +59,14 @@
 .top-mobile-navigation.is-active ul {
     display: block;
     position: fixed;
-    top: rem(76);
+    top: rem(105);
     left: 0;
     margin: 0;
     height: 100%;
     width: 100%;
     background: #000;
     color: #fff;
+    z-index: 1;
 }
 
 .top-mobile-navigation li {
