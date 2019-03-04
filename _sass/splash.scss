@@ -1,0 +1,44 @@
+.splash {
+    width: 100%;
+    padding-bottom: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.splash img {
+    position: absolute;
+    min-height: 100%;
+    min-width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.splash_threeTwo {
+    padding-bottom: 66.66%;
+}
+
+.splash_600 {
+    padding-bottom: rem(600);
+}
+
+.splash-box {
+    background: $green;
+    padding: rem(20);
+}
+
+@media (min-width: breakpoint(2)) {
+    .splash-wrapper {
+        position: relative;
+        margin: 0 auto;
+        padding: 0 rem(30);
+        max-width: rem(960);
+    }
+    .splash-box {
+        position: absolute;
+        z-index: 1;
+        transform: translateY(-100%);
+        right: 0;
+        width: rem(300);
+    }
+}

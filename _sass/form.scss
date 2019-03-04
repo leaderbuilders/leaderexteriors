@@ -1,0 +1,33 @@
+.form label, .form_dark label {
+    font-size: rem(14);
+    font-weight: 700;
+}
+
+.form input, .form textarea {
+    margin-bottom: rem(20);
+    padding: rem(10) rem(10);
+    font-family: "roboto", serif;
+    font-size: rem(16);
+    width: 100%;
+    cursor: text;
+    background: #f8f8f8;
+}
+
+.form_dark input, .form_dark textarea {
+    margin-bottom: rem(20);
+    padding: rem(10) rem(10);
+    font-family: "roboto", serif;
+    font-size: rem(16);
+    width: 100%;
+    cursor: text;
+    background: #303030;
+    color: #fff;
+}
+
+.form textarea {
+    height: rem(170);
+}
+
+.form_dark textarea {
+    height: rem(150);
+}

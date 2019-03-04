@@ -1,0 +1,83 @@
+.text {
+    // Does nothing by default
+}
+
+.text_center {
+    text-align: center;
+}
+
+.text_right {
+    text-align: right;
+}
+
+.text_left {
+    text-align: left;
+}
+
+.text_small {
+    font-size: rem(14);
+    letter-spacing: .03em;
+}
+
+.text_large {
+    font-size: rem(19);
+}
+
+.text_extraLarge {
+    font-size: rem(23);
+}
+
+.text_extraExtraLarge {
+    font-size: rem(32);
+}
+
+.text_light {
+    font-weight: 300;
+}
+
+.text_regular {
+    font-weight: 400;
+}
+
+.text_medium {
+    font-weight: 500;
+}
+
+.text_bold {
+    font-weight: 700;
+}
+
+.text_italic {
+    font-style: italic;
+}
+
+.text_underline {
+    text-decoration: underline;
+}
+
+.text_clear {
+    text-decoration: none;
+}
+
+.text_uppercase {
+    text-transform: uppercase;
+}
+
+.text_black {
+    color: #2d2d2d;
+}
+
+.text_white {
+    color: #ffffff;
+}
+
+.text_visuallyHidden {
+    position: absolute;
+    overflow: hidden;
+    padding: 0;
+    border: 0;
+    margin: -1px;
+    height: 1px;
+    width: 1px;
+    clip: rect(0 0 0 0);
+}

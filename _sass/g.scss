@@ -1,0 +1,186 @@
+/*
+*   _g.scss
+*
+*   Flexible grid system.
+*/
+
+.g {
+    //display: flex;
+    @include flexbox();
+    //align-items: stretch;
+    @include align-items(stretch);
+    //justify-content: center;
+    @include justify-content(left);
+    //flex-wrap: wrap;
+    @include flex-wrap(wrap);
+    margin-left: rem(-$LAYOUT_GRID_GUTTER);
+}
+
+.g_flush {
+    margin-left: 0;
+}
+
+.g_tight {
+    margin-left: rem(-$LAYOUT_GRID_GUTTER / 2);
+}
+
+.g_alignTop {
+    //align-items: top;
+    @include align-items(top);
+}
+
+.g_alignCenter {
+    //align-items: center;
+    @include align-items(center);
+}
+
+.g_alignBottom {
+    //align-items: bottom;
+    @include align-items(bottom);
+}
+
+.g_justifyCenter {
+    //justify-content: center;
+    @include justify-content(center);
+}
+
+.g_justifyRight {
+    //justify-content: right;
+    @include justify-content(right);
+}
+
+.g_justifyAround {
+    //justify-content: space-around;
+    @include justify-content(space-around);
+}
+
+.g_justifyBetween {
+    //justify-content: space-between;
+    @include justify-content(space-between);
+}
+
+@mixin g-col($n) {
+    max-width: percentage($n / $LAYOUT_GRID_COLUMNS);
+    //flex-basis: percentage($n / $LAYOUT_GRID_COLUMNS);
+    @include flex-basis(percentage($n / $LAYOUT_GRID_COLUMNS));
+}
+
+.g-col {
+    //display: block;
+    //flex-grow: 0;
+    @include flex-grow(0);
+    //flex-shrink: 1;
+    @include flex-shrink(1);
+    padding-left: rem($LAYOUT_GRID_GUTTER);
+    @include g-col(12);
+    .g_flush > & {
+        padding-left: 0;
+    }
+    .g_tight > & {
+        padding-left: rem($LAYOUT_GRID_GUTTER / 2);
+    }
+}
+
+.g-col_alignCenter {
+    //display: flex;
+    @include flexbox();
+    //align-items: center;
+    @include align-items(center);
+    //justify-content: stretch;
+    @include justify-content(stretch);
+}
+
+.g-col_alignCenter > * {
+    width: 100%;
+}
+
+.g-col_1st {
+    //order: 1;
+    @include order(1);
+}
+
+.g-col_2nd {
+    //order: 2;
+    @include order(2);
+}
+
+.g-col_3rd {
+    //order: 3;
+    @include order(3);
+}
+
+.g-col_4th {
+    //order: 4;
+    @include order(4);
+}
+
+    
+@for $i from 1 through length($LAYOUT_BREAKPOINTS) {
+    @media screen and (min-width: breakpoint($i)) {
+
+        .g-col_1st\@br#{$i} {
+            //order: 1;
+            @include order(1);
+        }
+
+        .g-col_2nd\@br#{$i} {
+            //order: 2;
+            @include order(2);
+        }
+
+        .g-col_3rd\@br#{$i} {
+            //order: 3;
+            @include order(3);
+        }
+
+        .g-col_4th\@br#{$i} {
+            //order: 4;
+            @include order(4);
+        }
+
+    }
+}
+
+@for $i from 1 through $LAYOUT_GRID_COLUMNS {
+    
+    .g-col_#{$i} {
+        @include g-col($i);
+    }
+    
+}
+
+.g_mBetween > * + * {
+    margin-top: rem(30);
+    @media screen and (min-width: breakpoint(1)) {
+        margin-top: rem(40);
+    }
+}
+
+.g_mBetween_loose > * + * {
+    margin-top: rem(50);
+    @media screen and (min-width: breakpoint(1)) {
+        margin-top: rem(60);
+    }
+}
+
+.g_mBetween_tight > * + * {
+    margin-top: rem(20);
+}
+
+@for $i from 1 through length($LAYOUT_BREAKPOINTS) {
+
+    @media screen and (min-width: breakpoint($i)) {
+        .g_mBetween\!\@br#{$i} > * + * {
+            margin-top: 0;
+        }
+    }
+
+    @media screen and (min-width: breakpoint($i)) {
+        @for $j from 1 through $LAYOUT_GRID_COLUMNS {
+            .g-col_#{$j}\@br#{$i} {
+                @include g-col($j);
+            }
+        }
+    }
+
+}

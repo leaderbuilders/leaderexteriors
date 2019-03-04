@@ -1,0 +1,16 @@
+$LAYOUT_BREAKPOINTS: 540, 960;
+$LAYOUT_GRID_GUTTER: 30;
+$LAYOUT_GRID_COLUMNS: 12;
+
+@function rem($n) {
+    @return $n / 16 * 1rem;
+}
+
+@function breakpoint($n) {
+    @return rem(nth($LAYOUT_BREAKPOINTS, $n));
+}
+
+@mixin calc($property, $expression) { 
+  #{$property}: -webkit-calc(#{$expression}); 
+  #{$property}: calc(#{$expression}); 
+} 

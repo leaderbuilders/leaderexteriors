@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" href="/assets/css/main.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,400i,500,700,700i" rel="stylesheet" />
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-xxxxxxxxx-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-xxxxxxxxx-1');
+        </script>
+        <title>{{ page.title }} | Leader Exteriors</title>
+        <meta name="description" content="{{ page.description }}" />
+        <meta property="og:site_name" content="Leader Exteriors" />
+        <meta property="og:title" content="{{ page.title }}" />
+        <meta property="og:description" content="{{ page.description }}" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://leaderexteriors.com{{ page.url }}" />
+        <link rel="canonical" href="https://leaderexteriors.com{{ page.url }}" />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    </head>
+    <body class="background">
+        <header class="top-super">
+            <div class="wrapper">
+                <div class="grid grid_alignCenter">
+                    <div class="grid-col grid-col_9">
+                        <h1 class="top-logo">
+                            <a class="top-logo-image" href="/">
+                                <span class="text text_visuallyHidden">Leader Exteriors</span>
+                            </a>
+                        </h1>
+                    </div>
+                    <div class="grid-col grid-col_3">
+                        <div class="top-contact">
+                            <p class="text text_bold text_small">Contact Us</p>
+                            <ul class="">
+                                <li class="text text_small text_light"><a class="text_clear" href="mailto:leader@leaderexteriors.com">leader@leaderexteriors.com</a></li>
+                                <li class="text text_small text_light"><a class="text_clear" href="tel:+1847-965-2040">847-965-2040</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <nav class="top-mobile-navigation">
+                    <a class="top-mobile-navigation-toggle" href="/"><i class="top-mobile-navigation-toggle-icon"></i></a>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/exteriors">Exterior Makeovers</a></li>
+                        <li><a href="/outdoors">Outdoor Spaces</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <header class="top-sub">
+            <nav class="top-navigation">
+                <div class="wrapper">
+                    <ul>
+                        <li><a href="/" class="{% if page.permalink == "/" %}isActive{% endif %}">Home</a></li>
+                        <li><a href="/about" class="{% if page.permalink == "/about/" %}isActive{% endif %}">About</a></li>
+                        <li><a href="/exteriors" class="{% if page.permalink == "/exteriors/" %}isActive{% endif %}">Exterior Makeovers</a></li>
+                        <li><a href="/outdoors" class="{% if page.permalink == "/outdoors/" %}isActive{% endif %}">Outdoor Spaces</a></li>
+                        <li><a href="/contact" class="{% if page.permalink == "/contact/" %}isActive{% endif %}">Contact Us</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+    {{ content }}
+    <footer>
+        <div class="bottom">
+            <div class="wrapper">
+                <div class="grid grid_large">
+                    <div class="grid-col grid-col_6@br2">
+                        <form class="form_dark" action="https://formspree.io/leader@leaderexteriors.com" method="POST">
+                            <input type="hidden" name="_next" value="https://leaderexteriors.com/contact-confirmation" />
+                            <input type="text" name="_gotcha" style="display:none" />
+
+                            <div class="grid grid_medium m m_bottom_loose">
+                                <div class="grid-col">
+                                    <label for="name">Name</label>
+                                    <input type="text" id="name" name="name" required />
+                                </div>
+                                <div class="grid-col">
+                                    <label for="city">City</label>
+                                    <input type="text" id="city" name="city" required />
+                                </div>
+                                <div class="grid-col">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email" required />
+                                </div>
+                                <div class="grid-col">
+                                    <label for="phone">Phone</label>
+                                    <input type="phone" id="phone" name="phone" required />
+                                </div>
+                                <div class="grid-col">
+                                    <label for="message">Please describe your project:</label>
+                                    <textarea id="message" name="message" required></textarea>
+                                </div>
+                            </div>
+                            <div>
+                                <button class="button">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="grid-col grid-col_6@br2">
+                        <p class="text text_bold text_uppercase">Leader Exteriors</p>
+                        <p class="text text_small m m_bottom"><span style="color:#1c7a5b">+</span> outdoor spaces</p>
+                        <p class="text text_small text_light m m_bottom_extraTight"><a class="text_clear" href="https://goo.gl/maps/P7MnXjQvw5N2" target="_blank">6327 Dempster St.<br>Morton Grove, IL 60053</a></p>
+                        <ul class="m m_bottom_loose">
+                            <li class="text text_small text_light"><a class="text_clear" href="mailto:leader@leaderexteriors.com">leader@leaderexteriors.com</a></li>
+                            <li class="text text_small text_light"><a class="text_clear" href="tel:+1847-965-2040">847-965-2040</a></li>
+                        </ul>
+                        <p class="text text_small text_light text_italic m m_bottom_extraTight">Also check out:</p>
+                        <p class="m m_bottom_extraLoose"><a class="text_clear" href="http://www.leaderbuilders.com" target="_blank"><span class="text text_bold text_uppercase">Leader Builders Corp.</span><br><span class="text text_small text_light">additions <span style="color:#ffdc00">+</span> renovations</span></a></p>
+                        <p class="text text_small text_bold m m_bottom_tight">Areas Served</p>
+                        <ul class="text text_small text_light">
+                            <li class="m m_bottom_tight">The City of Chicago including Edison Park, Forest Glen, Irving Park, Lakeview, Lincoln Park, Lincoln Square, Logan Square, North Center, and West Town.</li>
+                            <li class="m m_bottom_tight">The North Shore including Evanston, Wilmette, and Winnetka.</li>
+                            <li class="m m_bottom_tight">The Near Northwest Suburbs including Glenview, Park Ridge, and Skokie.</li>
+                            <li class="m m_bottom_tight">The Near West Suburbs including Downer's Grove, La Grange, and Oak Park.</li>
+                            <li>The City of Naperville.</li>
+                        </ul>
+                    </div>
+                    <div class="grid-col">
+                        <p class="text text_small text_light">Copyright {{ 'now' | date: '%Y' }} Leader Exteriors | <a href="/privacy-policy">Privacy Policy</a> | <a href="/site-map">Site Map</a></p>
+                        <ul class="text text_small text_light">
+                            <li><a target="_blank" href="https://www.houzz.com/">Houzz</a></li>
+                            <li><a target="_blank" href="https://www.facebook.com/">Facebook</a></li>
+                            <li><a target="_blank" href="https://www.instagram.com/">Instagram</a></li>
+                            <li><a target="_blank" href="https://www.pinterest.com/">Pinterest</a></li>
+                            <li><a target="_blank" href="https://www.youtube.com/">Youtube</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="/scripts/lib/jquery-2.1.4.min.js"></script>
+    <script src="/scripts/mobile-navigation.js"></script>
+    </body>
+</html>

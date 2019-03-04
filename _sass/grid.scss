@@ -1,0 +1,61 @@
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.grid-col {
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.grid_alignCenter {
+    align-items: center;
+}
+
+.grid_small {
+  margin: rem(-15) 0 0 rem(-15);
+}
+
+.grid_small > .grid-col {
+  padding: rem(15) 0 0 rem(15);
+}
+
+.grid_medium {
+  margin: rem(-30) 0 0 rem(-30);
+}
+
+.grid_medium > .grid-col {
+  padding: rem(30) 0 0 rem(30);
+}
+
+.grid_large {
+  margin: rem(-60) 0 0 rem(-60);
+}
+
+.grid_large > .grid-col {
+  padding: rem(60) 0 0 rem(60);
+}
+
+@for $i from 1 through 12 {
+  .grid-col_#{$i} {
+    width: $i / 12 * 100%;
+  }
+}
+
+@media (min-width: breakpoint(1)) {
+  @for $i from 1 through 12 {
+    .grid-col_#{$i}\@br1 {
+      width: $i / 12 * 100%;
+    }
+  }
+}
+
+@media (min-width: breakpoint(2)) {
+  @for $i from 1 through 12 {
+    .grid-col_#{$i}\@br2 {
+      width: $i / 12 * 100%;
+    }
+  }
+}

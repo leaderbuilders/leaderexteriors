@@ -1,0 +1,41 @@
+.buttons {
+    text-align: center;
+    font-size: 0;
+    margin-top: rem(40);
+    @media screen and (min-width: breakpoint(1)) {
+        margin-top: rem(60);
+    }
+    @media screen and (min-width: breakpoint(2)) {
+        margin-top: rem(60);
+    }
+}
+
+.button {
+    font-family: "roboto", serif;
+    padding: rem(12) rem(30);
+    display: block;
+    & + .button {
+        margin-top: rem(10);
+    }
+    @media screen and (min-width: breakpoint(1)) {
+        display: inline-block;
+        & + .button {
+            margin-left: rem(20);
+            margin-top: 0;
+        }
+    }
+    font-size: rem(14);
+    letter-spacing: .05em;
+    border: $green solid rem(1);
+    background: $green;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    border-radius: rem(2);
+}
+
+.button:hover,
+.button:focus {
+    background: $green;
+    border-color: $green;
+}

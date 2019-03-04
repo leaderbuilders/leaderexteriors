@@ -1,0 +1,45 @@
+body {
+    font-family: "roboto", serif;
+    font-weight: 400;
+    line-height: 1.5;
+    font-size: rem(16);
+    letter-spacing: .01em;
+}
+
+/*
+p, ol, ul {
+    margin: rem(10) 0;
+}
+*/
+
+a {
+    color: inherit;
+}
+
+.lineheight {
+    line-height: rem(80);
+}
+
+.center {
+    text-align: center;
+}
+
+.zero {
+    font-size: 0;
+}
+
+.mb0 {
+    margin-bottom: 0 !important;
+}
+
+@media screen and (min-width: breakpoint(1)) {
+    .br1-mb0 {
+        margin-bottom: 0 !important;
+    }
+}
+
+@media screen and (min-width: breakpoint(2)) {
+    .br2-mb0 {
+        margin-bottom: 0 !important;
+    }
+}

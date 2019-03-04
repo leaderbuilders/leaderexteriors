@@ -1,0 +1,59 @@
+.m {
+    // Does nothing by default.
+}
+
+.m_bottom_extraTight {
+    margin-bottom: rem(5);
+}
+
+.m_bottom_tight {
+    margin-bottom: rem(10);
+}
+
+.m_bottom {
+    margin-bottom: rem(20);
+}
+
+.m_bottom_loose {
+    margin-bottom: rem(30);
+}
+
+.m_bottom_extraLoose {
+    margin-bottom: rem(40);
+}
+
+.m_bottom_extraExtraLoose {
+    margin-bottom: rem(50);
+}
+
+.m_bottom_responsive {
+    margin-bottom: rem(20);
+    @media screen and (min-width: breakpoint(1)) {
+        margin-bottom: rem(0);
+    }
+}
+
+.m_bottom_responsive2 {
+    margin-bottom: rem(20);
+    @media screen and (min-width: breakpoint(2)) {
+        margin-bottom: rem(0);
+    }
+}
+
+.m_bottom\!\@br2 {
+    @media screen and (min-width: breakpoint(2)) {
+        margin-bottom: rem(0);
+    }
+}
+
+.m_top {
+    margin-top: rem(20);
+}
+
+.m_top_tight {
+    margin-top: rem(10);
+}
+
+.m_top_loose {
+    margin-top: rem(30);
+}

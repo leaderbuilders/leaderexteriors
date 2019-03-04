@@ -1,0 +1,28 @@
+.h {
+    color: $green;
+    font-weight: 400;
+}
+
+.h_1 {
+    font-size: rem(19);
+}
+
+.h_2 {
+    font-size: rem(16);
+}
+
+.h_underline::after {
+    content: "";
+    display: block;
+    width: rem(300);
+    border-bottom: 2px solid green;
+    position: absolute;
+    left: 50%;
+    margin-left: rem(-215);
+    margin-top: rem(5);
+    margin-bottom: rem(10);
+}
+
+.h_underline {
+    position: relative;
+}

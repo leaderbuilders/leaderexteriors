@@ -1,0 +1,169 @@
+// Variables:
+
+$gutter: 30 !default;
+$gutter-sides: 15 !default;
+$breakpoints: 540, 960 !default;
+$centered: true !default;
+$sp: 12 !default;
+
+$classes: true !default;
+$push-pull-classes: true !default;
+$viewports: true !default;
+
+
+// Directives:
+
+@if $viewports {
+
+    @-ms-viewport {
+        width: device-width;
+        zoom: 1.0;
+        min-zoom: 1.0;
+    }
+    
+    @viewport {
+        width: device-width;
+        zoom: 1.0;
+        min-zoom: 1.0;
+    }
+
+}
+
+
+// Utilities:
+
+@function rem($n) {
+    @return $n / 16 * 1rem;
+}
+
+@function breakpoint($n) {
+    @return rem(nth($breakpoints, $n));
+}
+
+@mixin clearfix {
+    &:before, &:after {
+        display: table;
+        content: "";
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+@if $classes {
+
+    .clearfix {
+        @include clearfix;
+    }
+
+}
+
+
+// Grid Styles:
+
+@if $classes {
+
+    .g {
+        overflow: hidden;
+        @include clearfix;
+        padding-right: rem($gutter-sides);
+        padding-left: rem($gutter-sides);
+        @if $centered {
+            margin-right: auto;
+            margin-left: auto;
+        }
+    }
+
+}
+
+
+// Span Styles:
+
+@mixin sp($n) {
+    display: block;
+    float: left;
+    padding-right: rem($gutter / 2);
+    padding-left: rem($gutter / 2);
+    width: percentage($n / $sp);
+}
+
+@mixin sp-gutterless {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+@if $classes {
+
+    @for $i from 1 through $sp {
+        .sp#{$i} {
+            @include sp($i);
+        }
+    }
+
+    @for $i from 1 through length($breakpoints) {
+        @media screen and (min-width: rem(nth($breakpoints, $i))) {
+            @for $j from 1 through $sp {
+                .br#{$i}-sp#{$j} {
+                    @include sp($j);
+                }
+            }
+        }
+    }
+
+    .sp-gutterless {
+        @include sp-gutterless;
+    }
+
+}
+
+
+// Push & Pull Styles
+// This feature adds weight to the compiled CSS proportionate to the $breakpoints and $sp.
+// Ex: <div class="push1 br1-push6 br6-push0"></div>
+
+
+@mixin push($n) {
+    @if ($n > 0) {
+        position: relative;
+        left: percentage($n / $sp);
+    } @else {
+        left: 0;
+    }
+}
+
+@mixin pull($n) {
+    @if ($n > 0) {
+        position: relative;
+        left: percentage($n / $sp) * -1;
+    } @else {
+        left: 0;
+    }
+}
+    
+@if $push-pull-classes {
+
+    // Only go from 1 here:
+    @for $i from 1 through $sp - 1 {
+        .push#{$i} {
+            @include push($i);
+        }
+        .pull#{$i} {
+            @include pull($i);
+        }
+    }
+
+    @for $i from 1 through length($breakpoints) {
+        @media screen and (min-width: breakpoint($i)) {
+            // Go from 0 in case we want to negate an earlier push/pull:
+            @for $j from 0 through $sp - 1 {
+                .br#{$i}-push#{$j} {
+                    @include push($j);
+                }
+                .br#{$i}-pull#{$j} {
+                    @include pull($j);
+                }
+            }
+        }
+    }
+
+}
