@@ -24,7 +24,7 @@
 
 .splash_responsive {
     padding-bottom: 66.66%;
-    @media (min-width: breakpoint(1)) {
+    @media (min-width: breakpoint(2)) {
         padding-bottom: rem(600);
     }
 }
