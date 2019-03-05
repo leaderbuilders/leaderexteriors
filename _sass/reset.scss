@@ -43,7 +43,7 @@ a, button, input[type="submit"] {
     }
 }
 
-button::-moz-focus-inner, input::-moz-focus-inner { 
+button::-moz-focus-inner, input::-moz-focus-inner {
   padding: 0;
   border: 0;
 }
@@ -55,12 +55,4 @@ figure {
 
 img {
     vertical-align: bottom;
-}
-
-:not(.mt) > :first-child {
-    margin-top: 0;
-}
-
-:not(.mb) > :last-child {
-    margin-bottom: 0;
 }
